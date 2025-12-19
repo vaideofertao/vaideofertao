@@ -1,0 +1,206 @@
+<html><head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VaiDeOfertão</title>
+        <!-- Fonte Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <style>
+            * {
+              box-sizing: border-box;
+              margin: 0;
+              padding: 0;
+            }
+        
+            body {
+              font-family: 'Inter', sans-serif;
+              background-color: #c62828;
+            }
+        
+            /* HEADER */
+            .site-header {
+              background-color: #b71c1c;
+              padding: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              flex-wrap: wrap;
+            }
+        
+            .logo img {
+              max-height: 125px;
+            }
+        
+            .menu {
+              display: flex;
+              gap: 15px;
+            }
+        
+            .menu-btn {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              background-color: #fff;
+              color: #b71c1c;
+              padding: 10px 16px;
+              border-radius: 8px;
+              text-decoration: none;
+              font-weight: 600;
+            }
+        
+            /* CONTAINER */
+            .container {
+              max-width: 1200px;
+              margin: 40px auto;
+              padding: 0 20px;
+            }
+        
+            .produtos {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 20px;
+              background-color: #fff;
+              padding: 30px;
+              border-radius: 12px;
+            }
+        
+            .produto {
+              border: 1px solid #eee;
+              border-radius: 10px;
+              padding: 15px;
+              text-align: center;
+            }
+        
+            .produto img {
+              max-width: 100%;
+              border-radius: 8px;
+            }
+        
+            .produto h3 {
+              margin: 15px 0 8px;
+              font-size: 18px;
+            }
+        
+            .preco {
+              font-size: 16px;
+              font-weight: 700;
+              color: #2e7d32;
+              margin-bottom: 8px;
+            }
+        
+            .produto p {
+              font-size: 14px;
+              margin-bottom: 12px;
+            }
+        
+            /* BOTÕES MARKETPLACE */
+            .botoes-marketplace {
+              display: flex;
+              gap: 10px;
+              justify-content: center;
+            }
+        
+            .btn {
+              padding: 10px 14px;
+              border-radius: 6px;
+              text-decoration: none;
+              font-weight: 600;
+              font-size: 14px;
+            }
+        
+            .btn.shopee {
+              background-color: #ee4d2d;
+              color: #fff;
+            }
+        
+            .btn.mercado-livre {
+              background-color: #fdd835;
+              color: #000;
+            }
+        
+            /* FOOTER */
+            footer {
+              background-color: #8e0000;
+              color: #fff;
+              text-align: center;
+              padding: 20px;
+              margin-top: 40px;
+            }
+        
+            @media (max-width: 768px) {
+              .produtos {
+                grid-template-columns: 1fr;
+              }
+        
+              .menu {
+                width: 100%;
+                justify-content: center;
+                margin-top: 15px;
+              }
+            }
+        </style>
+    </head><body>
+        <header class="site-header">
+            <div class="logo">
+                <img src="_imagem\logo.png" alt="VaiDeOfertão">
+            </div>
+            <nav class="menu">
+                <a href="#skincare" class="menu-btn"><i class="fa-solid fa-spa"></i> Skincare</a>
+                <a href="#utilidades" class="menu-btn"><i class="fa-solid fa-house"></i> Utilidades</a>
+                <a href="#eletronicos" class="menu-btn"><i class="fa-solid fa-plug"></i> Eletrônicos</a>
+            </nav>
+        </header>
+        <div class="container">
+            <section class="produtos">
+                <!-- PRODUTO 1 -->
+                <div class="produto">
+                    <img src="_imagem\132127043.avif">
+                    <h3>Produto 1</h3>
+                    <div class="preco">A partir de R$ 129,90
+                        <span class="asterisco">*</span>
+                    </div>
+                    <p>Descrição curta e objetiva.</p>
+                    <div class="botoes-marketplace">
+                        <a href="LINK_SHOPEE" target="_blank" rel="nofollow noopener" class="btn shopee">Shopee</a>
+                        <a href="LINK_ML" target="_blank" rel="nofollow noopener" class="btn mercado-livre">Mercado Livre</a>
+                    </div>
+                </div>
+                <!-- PRODUTO 2 -->
+                <div class="produto">
+                    <img src="_imagem\132127043.avif">
+                    <h3>Produto 2</h3>
+                    <div class="preco">A partir de R$ 129,90
+                        <span class="asterisco">*</span>
+                    </div>
+                    <p>Descrição curta e objetiva.</p>
+                    <div class="botoes-marketplace">
+                        <a href="LINK_SHOPEE" target="_blank" rel="nofollow noopener" class="btn shopee">Shopee</a>
+                        <a href="LINK_ML" target="_blank" rel="nofollow noopener" class="btn mercado-livre">Mercado Livre</a>
+                    </div>
+                </div>
+                <!-- PRODUTO 3 -->
+                <div class="produto">
+                    <img src="_imagem\132127043.avif">
+                    <h3>Produto 3</h3>
+                    <div class="preco">A partir de R$ 129,90
+                        <span class="asterisco">*</span>
+                    </div>
+                    <p>Descrição curta e objetiva.</p>
+                    <div class="botoes-marketplace">
+                        <a href="LINK_SHOPEE" target="_blank" rel="nofollow noopener" class="btn shopee">Shopee</a>
+                        <a href="LINK_ML" target="_blank" rel="nofollow noopener" class="btn mercado-livre">Mercado Livre</a>
+                    </div>
+                </div>
+                <!-- Repete até 9 produtos -->
+            </section>
+        </div>
+        <footer>
+            <p>© 2025 – VaiDeOfertão</p>
+            <small>* Os preços e a disponibilidade dos produtos podem sofrer alterações sem
+                aviso prévio. Verifique as condições diretamente no marketplace antes de
+                concluir a compra.</small>
+        </footer>
+    
+
+</body></html>
