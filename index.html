@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<link rel="shortcut icon" href="/favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-	<meta name="apple-mobile-web-app-title" content="Vai de Ofertão" />
-	<link rel="manifest" href="/site.webmanifest" />
+  <!-- Favicons / PWA -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Vai de Ofertão">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- Básico -->
   <meta charset="UTF-8">
@@ -37,22 +38,36 @@
     }
 
     /* HEADER */
-    header {
+    .header {
       background-color: #b30000;
-      padding: 20px;
+      padding: 22px 16px 18px;
       text-align: center;
     }
 
+    .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
     .logo {
-      width: clamp(120px, 18vw, 200px);
+      width: clamp(130px, 20vw, 190px);
       height: auto;
-      margin-bottom: 15px;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.4px;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
@@ -61,13 +76,26 @@
       color: #b30000;
       text-decoration: none;
       padding: 10px 18px;
-      border-radius: 6px;
+      border-radius: 8px;
       font-weight: 600;
-      transition: 0.3s;
+      font-size: 14px;
+      transition: transform 0.15s ease, background-color 0.2s ease;
     }
 
     nav a:hover {
       background-color: #f2f2f2;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 480px) {
+      .brand-name {
+        font-size: 16px;
+      }
+
+      nav a {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
     }
 
     /* CONTAINER */
@@ -122,27 +150,24 @@
       flex-wrap: wrap;
     }
 
-.buy-buttons a {
-  text-decoration: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  display: inline-block;
-}
+    .buy-buttons a {
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+    }
 
-/* Shopee */
-.shopee {
-  background-color: #ee4d2d;
-  color: #ffffff;
-}
+    .shopee {
+      background-color: #ee4d2d;
+      color: #ffffff;
+    }
 
-/* Mercado Livre */
-.mercadolivre {
-  background-color: #ffe600;
-  color: #333333;
-}
-
+    .mercadolivre {
+      background-color: #ffe600;
+      color: #333333;
+    }
 
     /* AVISO */
     .notice {
@@ -162,24 +187,27 @@
       font-size: 14px;
     }
   </style>
-
 </head>
 
 <body>
 
   <!-- HEADER -->
-  <header>
-    <img src="images/logo.png" alt="Vai de Ofertão" class="logo">
+  <header class="header">
+    <div class="brand">
+      <img src="images/logo.png" alt="Vai de Ofertão" class="logo">
+      <span class="brand-name">Vai de Ofertão</span>
+    </div>
+
     <nav>
       <a href="#">Skincare</a>
       <a href="#">Utilidades</a>
       <a href="#">Eletrônicos</a>
     </nav>
-</header>
+  </header>
 
   <!-- CONTEÚDO -->
-<main class="container">
-  <section class="products">
+  <main class="container">
+    <section class="products">
 
       <article class="card">
         <img src="produto1.jpg" alt="Produto em oferta">
@@ -214,17 +242,17 @@
         </div>
       </article>
 
-  </section>
+    </section>
 
     <p class="notice">
       *Os preços podem sofrer alterações sem aviso prévio. Valores válidos no momento do clique.
     </p>
-</main>
+  </main>
 
   <!-- FOOTER -->
-<footer>
+  <footer>
     © 2025 – Vai de Ofertão. Todos os direitos reservados.
-</footer>
+  </footer>
 
 </body>
 </html>
