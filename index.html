@@ -1,252 +1,63 @@
-<html><head>
-        <!-- Favicons / PWA -->
-        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-        <link rel="shortcut icon" href="/favicon.ico">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <meta name="apple-mobile-web-app-title" content="Vai de Ofertão">
-        <link rel="manifest" href="/site.webmanifest">
-        <!-- Básico -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- SEO -->
-        <title>Vai de Ofertão | Ofertas e Promoções com os Melhores Preços</title>
-        <meta name="description" content="Confira as melhores ofertas e promoções do dia no Vai de Ofertão. Produtos selecionados com ótimo preço e links diretos para compra.">
-            <meta name="robots" content="index, follow">
-            <!-- Fonte Inter -->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-            <!-- CSS -->
-            <style>
-                * {
-                  margin: 0;
-                  padding: 0;
-                  box-sizing: border-box;
-                  font-family: 'Inter', Arial, sans-serif;
-                }
-            
-                body {
-                  background-color: #c40000;
-                  color: #333;
-                }
-            
-                /* HEADER */
-                .header {
-                  background-color: #b30000;
-                  padding: 22px 16px 18px;
-                  text-align: center;
-                }
-            
-                .brand {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  gap: 6px;
-                  margin-bottom: 16px;
-                }
-            
-                .logo {
-                  width: clamp(130px, 20vw, 190px);
-                  height: auto;
-                }
-            
-                .brand-name {
-                  font-size: 18px;
-                  font-weight: 700;
-                  color: #ffffff;
-                  letter-spacing: 0.4px;
-                }
-            
-                nav {
-                  display: flex;
-                  justify-content: center;
-                  gap: 12px;
-                  flex-wrap: wrap;
-                }
-            
-                nav a {
-                  background-color: #ffffff;
-                  color: #b30000;
-                  text-decoration: none;
-                  padding: 10px 18px;
-                  border-radius: 8px;
-                  font-weight: 600;
-                  font-size: 14px;
-                  transition: transform 0.15s ease, background-color 0.2s ease;
-                }
-            
-                nav a:hover {
-                  background-color: #f2f2f2;
-                  transform: translateY(-1px);
-                }
-            
-                @media (max-width: 480px) {
-                  .brand-name { font-size: 16px; }
-                  nav a { padding: 12px 20px; font-size: 15px; }
-                }
-            
-                /* CONTAINER */
-                .container {
-                  max-width: 1200px;
-                  margin: 30px auto;
-                  padding: 0 20px;
-                }
-            
-                /* GRID */
-                .products {
-                  display: grid;
-                  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                  gap: 22px;
-                }
-            
-                /* CARD */
-                .card {
-                  background-color: #ffffff;
-                  border-radius: 14px;
-                  padding: 18px;
-                  text-align: center;
-                  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-                  transition: transform 0.2s ease, box-shadow 0.2s ease;
-                }
-            
-                .card:hover {
-                  transform: translateY(-3px);
-                  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
-                }
-            
-                /* IMAGEM — CORREÇÃO DO "BURACO" */
-                .card img {
-                  width: 100%;
-                  aspect-ratio: 1 / 1;     /* mantém proporção */
-                  max-height: 220px;       /* evita espaço exagerado no mobile */
-                  object-fit: cover;       /* corta elegante */
-                  border-radius: 10px;
-                  margin-bottom: 12px;
-                  display: block;
-                  background-color: #f2f2f2; /* placeholder elegante */
-                }
-            
-                .card h2 {
-                  font-size: 17px;
-                  font-weight: 600;
-                  margin-bottom: 6px;
-                }
-            
-                .card p {
-                  font-size: 14px;
-                  margin-bottom: 10px;
-                  color: #666;
-                }
-            
-                .price {
-                  font-size: 18px;
-                  font-weight: 700;
-                  color: #b30000;
-                  margin-bottom: 14px;
-                }
-            
-                .buy-buttons {
-                  display: flex;
-                  gap: 10px;
-                  justify-content: center;
-                  flex-wrap: wrap;
-                }
-            
-                .buy-buttons a {
-                  text-decoration: none;
-                  padding: 12px 18px;
-                  border-radius: 8px;
-                  font-size: 15px;
-                  font-weight: 700;
-                  min-width: 130px;
-                  text-align: center;
-                  transition: transform 0.15s ease, filter 0.2s ease;
-                }
-            
-                .buy-buttons a:hover {
-                  transform: translateY(-1px);
-                  filter: brightness(0.95);
-                }
-            
-                .shopee {
-                  background-color: #ee4d2d;
-                  color: #ffffff;
-                }
-            
-                .mercadolivre {
-                  background-color: #ffe600;
-                  color: #333333;
-                }
-            
-                .notice {
-                  margin-top: 30px;
-                  font-size: 13px;
-                  color: #fff;
-                  text-align: center;
-                }
-            
-                footer {
-                  background-color: #8f0000;
-                  color: #fff;
-                  text-align: center;
-                  padding: 15px;
-                  margin-top: 40px;
-                  font-size: 14px;
-                }
-            </style>
-    </head><body>
-        <!-- HEADER -->
-        <header class="header">
-            <div class="brand">
-                <img src="images/logo.png" alt="Vai de Ofertão" class="logo" loading="eager">
-                <span class="brand-name">Vai de Ofertão</span>
-            </div>
-            <nav>
-                <a href="#">Skincare</a>
-                <a href="#">Utilidades</a>
-                <a href="#">Eletrônicos</a>
-            </nav>
-        </header>
-        <!-- CONTEÚDO -->
-        <main class="container">
-            <section class="products">
-                <article class="card">
-                    <img src="images\produtos\produtoteste.webp" alt="Produto em oferta" loading="lazy">
-                    <h2>Produto em Oferta</h2>
-                    <p>Descrição curta do produto.</p>
-                    <div class="price">A partir de R$ 99,90</div>
-                    <div class="buy-buttons">
-                        <a href="#" class="shopee">Shopee</a>
-                        <a href="#" class="mercadolivre">Mercado Livre</a>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="images\produtos\produtoteste.webp" alt="Produto em promoção" loading="lazy">
-                    <h2>Produto em Promoção</h2>
-                    <p>Descrição curta do produto.</p>
-                    <div class="price">A partir de R$ 149,90</div>
-                    <div class="buy-buttons">
-                        <a href="#" class="shopee">Shopee</a>
-                        <a href="#" class="mercadolivre">Mercado Livre</a>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="images\produtos\produtoteste.webp" alt="Produto com desconto" loading="lazy">
-                    <h2>Produto com Desconto</h2>
-                    <p>Descrição curta do produto.</p>
-                    <div class="price">A partir de R$ 79,90</div>
-                    <div class="buy-buttons">
-                        <a href="#" class="shopee">Shopee</a>
-                        <a href="#" class="mercadolivre">Mercado Livre</a>
-                    </div>
-                </article>
-            </section>
-            <p class="notice">*Os preços podem sofrer alterações sem aviso prévio. Valores válidos no
-                momento do clique.</p>
-        </main>
-        <!-- FOOTER -->
-        <footer>© 2025 – Vai de Ofertão. Todos os direitos reservados.</footer>
-    
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Favicons / PWA -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Vai de Ofertão">
+  <link rel="manifest" href="/site.webmanifest">
 
-</body></html>
+  <!-- Básico -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Vai de Ofertão | Ofertas e Promoções com os Melhores Preços</title>
+  <meta name="description" content="Confira as melhores ofertas e promoções do dia no Vai de Ofertão. Produtos selecionados com ótimo preço e links diretos para compra.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Fonte Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', Arial, sans-serif; }
+    body { background-color: #c40000; color: #333; }
+
+    .header { background-color: #b30000; padding: 22px 16px 18px; text-align: center; }
+    .brand { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-bottom: 16px; }
+    .logo { width: clamp(130px, 20vw, 190px); }
+    .brand-name { font-size: 18px; font-weight: 700; color: #fff; }
+
+    nav { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    nav a {
+      background-color: #fff; color: #b30000; text-decoration: none;
+      padding: 10px 18px; border-radius: 8px; font-weight: 600;
+    }
+
+    .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+
+    .card {
+      background-color: #fff; border-radius: 14px; padding: 18px; text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      max-height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      background-color: #f2f2f2;
+    }
+
+    .price { font-size: 18px; font-weight: 700; color: #b30000; margin-bottom: 14px; }
+
+    .buy-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .buy-buttons a {
+      padding: 12px 18px; border-radius: 8px; font-weight:
