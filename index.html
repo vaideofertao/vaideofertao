@@ -109,40 +109,52 @@
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 22px;
     }
 
-    /* CARD */
+    /* CARD – REFINADO */
     .card {
       background-color: #ffffff;
-      border-radius: 10px;
-      padding: 15px;
+      border-radius: 14px;
+      padding: 18px;
       text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
     }
 
     .card img {
       width: 100%;
       height: auto;
-      border-radius: 8px;
-      margin-bottom: 10px;
+      border-radius: 10px;
+      margin-bottom: 12px;
     }
 
     .card h2 {
-      font-size: 18px;
-      margin-bottom: 8px;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
     }
 
     .card p {
       font-size: 14px;
-      margin-bottom: 12px;
-      color: #555;
+      margin-bottom: 10px;
+      color: #666;
     }
 
+    /* PREÇO */
     .price {
-      font-weight: 600;
-      margin-bottom: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #b30000;
+      margin-bottom: 14px;
     }
 
+    /* BOTÕES */
     .buy-buttons {
       display: flex;
       gap: 10px;
@@ -152,11 +164,18 @@
 
     .buy-buttons a {
       text-decoration: none;
-      padding: 10px 16px;
-      border-radius: 6px;
-      font-size: 14px;
-      font-weight: 600;
-      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      min-width: 130px;
+      text-align: center;
+      transition: transform 0.15s ease, filter 0.2s ease;
+    }
+
+    .buy-buttons a:hover {
+      transform: translateY(-1px);
+      filter: brightness(0.95);
     }
 
     .shopee {
@@ -213,7 +232,7 @@
         <img src="produto1.jpg" alt="Produto em oferta">
         <h2>Produto em Oferta</h2>
         <p>Descrição curta do produto.</p>
-        <div class="price">A partir de R$ 99,90*</div>
+        <div class="price">A partir de R$ 99,90</div>
         <div class="buy-buttons">
           <a href="#" class="shopee">Shopee</a>
           <a href="#" class="mercadolivre">Mercado Livre</a>
@@ -224,7 +243,7 @@
         <img src="produto2.jpg" alt="Produto em promoção">
         <h2>Produto em Promoção</h2>
         <p>Descrição curta do produto.</p>
-        <div class="price">A partir de R$ 149,90*</div>
+        <div class="price">A partir de R$ 149,90</div>
         <div class="buy-buttons">
           <a href="#" class="shopee">Shopee</a>
           <a href="#" class="mercadolivre">Mercado Livre</a>
@@ -235,7 +254,7 @@
         <img src="produto3.jpg" alt="Produto com desconto">
         <h2>Produto com Desconto</h2>
         <p>Descrição curta do produto.</p>
-        <div class="price">A partir de R$ 79,90*</div>
+        <div class="price">A partir de R$ 79,90</div>
         <div class="buy-buttons">
           <a href="#" class="shopee">Shopee</a>
           <a href="#" class="mercadolivre">Mercado Livre</a>
