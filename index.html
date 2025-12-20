@@ -112,7 +112,7 @@
       gap: 22px;
     }
 
-    /* CARD – REFINADO */
+    /* CARD */
     .card {
       background-color: #ffffff;
       border-radius: 14px;
@@ -132,6 +132,7 @@
       height: auto;
       border-radius: 10px;
       margin-bottom: 12px;
+      display: block;
     }
 
     .card h2 {
@@ -146,7 +147,6 @@
       color: #666;
     }
 
-    /* PREÇO */
     .price {
       font-size: 18px;
       font-weight: 700;
@@ -154,7 +154,6 @@
       margin-bottom: 14px;
     }
 
-    /* BOTÕES */
     .buy-buttons {
       display: flex;
       gap: 10px;
@@ -188,7 +187,6 @@
       color: #333333;
     }
 
-    /* AVISO */
     .notice {
       margin-top: 30px;
       font-size: 13px;
@@ -196,7 +194,6 @@
       text-align: center;
     }
 
-    /* FOOTER */
     footer {
       background-color: #8f0000;
       color: #fff;
@@ -213,7 +210,7 @@
   <!-- HEADER -->
   <header class="header">
     <div class="brand">
-      <img src="images/logo.png" alt="Vai de Ofertão" class="logo">
+      <img src="images/logo.png" alt="Vai de Ofertão" class="logo" loading="eager">
       <span class="brand-name">Vai de Ofertão</span>
     </div>
 
@@ -229,7 +226,7 @@
     <section class="products">
 
       <article class="card">
-        <img src="produto1.jpg" alt="Produto em oferta">
+        <img src="produto1.jpg" alt="Produto em oferta" loading="lazy" width="600" height="600">
         <h2>Produto em Oferta</h2>
         <p>Descrição curta do produto.</p>
         <div class="price">A partir de R$ 99,90</div>
@@ -240,7 +237,7 @@
       </article>
 
       <article class="card">
-        <img src="produto2.jpg" alt="Produto em promoção">
+        <img src="produto2.jpg" alt="Produto em promoção" loading="lazy" width="600" height="600">
         <h2>Produto em Promoção</h2>
         <p>Descrição curta do produto.</p>
         <div class="price">A partir de R$ 149,90</div>
@@ -251,7 +248,7 @@
       </article>
 
       <article class="card">
-        <img src="produto3.jpg" alt="Produto com desconto">
+        <img src="produto3.jpg" alt="Produto com desconto" loading="lazy" width="600" height="600">
         <h2>Produto com Desconto</h2>
         <p>Descrição curta do produto.</p>
         <div class="price">A partir de R$ 79,90</div>
