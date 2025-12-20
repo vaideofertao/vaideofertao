@@ -1,226 +1,229 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- SEO BÁSICO -->
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="Vai de Ofertão" />
+	<link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Básico -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Vai de Ofertão | As Melhores Ofertas do Dia</title>
-
-  <meta name="description" content="As melhores ofertas do dia em Skincare, Utilidades e Eletrônicos. Compare preços e compre com segurança na Shopee e Mercado Livre.">
-  <meta name="keywords" content="ofertas, promoções, skincare barato, eletrônicos em oferta, utilidades domésticas, shopee ofertas, mercado livre ofertas">
+  <!-- SEO -->
+  <title>Vai de Ofertão | Ofertas e Promoções com os Melhores Preços</title>
+  <meta name="description" content="Confira as melhores ofertas e promoções do dia no Vai de Ofertão. Produtos selecionados com ótimo preço e links diretos para compra.">
   <meta name="robots" content="index, follow">
 
-  <link rel="canonical" href="https://www.vaideofertao.com.br/">
-
-  <!-- OPEN GRAPH -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Vai de Ofertão | As Melhores Ofertas do Dia">
-  <meta property="og:description" content="Ofertas selecionadas em Skincare, Utilidades e Eletrônicos. Compare preços e compre nos maiores marketplaces.">
-  <meta property="og:url" content="https://www.vaideofertao.com.br/">
-  <meta property="og:image" content="https://www.vaideofertao.com.br/og-image.jpg">
-
-  <!-- TWITTER -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Vai de Ofertão | As Melhores Ofertas do Dia">
-  <meta name="twitter:description" content="As melhores ofertas do dia em Skincare, Utilidades e Eletrônicos.">
-  <meta name="twitter:image" content="https://www.vaideofertao.com.br/og-image.jpg">
-
-  <!-- FONTE INTER -->
+  <!-- Fonte Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- ESTILO -->
+  <!-- CSS -->
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Inter', Arial, sans-serif;
-      background: #c62828;
+    }
+
+    body {
+      background-color: #c40000;
+      color: #333;
     }
 
     /* HEADER */
     header {
-      background: #b71c1c;
+      background-color: #b30000;
       padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
+      text-align: center;
     }
 
-    header img {
-      height: 45px;
+    .logo {
+      width: clamp(120px, 18vw, 200px);
+      height: auto;
+      margin-bottom: 15px;
     }
 
-    .menu {
+    nav {
       display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
       justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
-    .menu a {
-      background: #ffffff;
-      color: #b71c1c;
-      padding: 10px 18px;
-      border-radius: 8px;
+    nav a {
+      background-color: #ffffff;
+      color: #b30000;
       text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 6px;
       font-weight: 600;
-      font-size: 14px;
-      transition: all 0.2s ease;
+      transition: 0.3s;
     }
 
-    .menu a:hover {
-      background: #f5f5f5;
-      transform: translateY(-1px);
+    nav a:hover {
+      background-color: #f2f2f2;
     }
 
-    /* CONTAINER PRINCIPAL */
+    /* CONTAINER */
     .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 12px;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
     }
 
-    /* GRID DE PRODUTOS */
-    .grid {
+    /* GRID */
+    .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
 
+    /* CARD */
     .card {
-      border: 1px solid #eee;
+      background-color: #ffffff;
       border-radius: 10px;
-      padding: 20px;
+      padding: 15px;
       text-align: center;
     }
 
     .card img {
-      width: 40px;
-      opacity: 0.4;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
       margin-bottom: 10px;
     }
 
-    .card h3 {
-      margin: 10px 0;
+    .card h2 {
       font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: #555;
     }
 
     .price {
-      color: #2e7d32;
       font-weight: 600;
-      margin: 10px 0;
+      margin-bottom: 12px;
     }
 
-    .buttons {
+    .buy-buttons {
       display: flex;
-      justify-content: center;
       gap: 10px;
-      margin-top: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    .btn-shopee {
-      background: #ee4d2d;
-      color: #ffffff;
-      padding: 8px 14px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-    }
+.buy-buttons a {
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+}
 
-    .btn-ml {
-      background: #ffd500;
-      color: #000000;
-      padding: 8px 14px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
+/* Shopee */
+.shopee {
+  background-color: #ee4d2d;
+  color: #ffffff;
+}
+
+/* Mercado Livre */
+.mercadolivre {
+  background-color: #ffe600;
+  color: #333333;
+}
+
+
+    /* AVISO */
+    .notice {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #fff;
+      text-align: center;
     }
 
     /* FOOTER */
     footer {
-      background: #8e0000;
-      color: #ffffff;
+      background-color: #8f0000;
+      color: #fff;
       text-align: center;
-      padding: 20px;
+      padding: 15px;
+      margin-top: 40px;
       font-size: 14px;
     }
-
-    footer small {
-      display: block;
-      margin-top: 10px;
-      font-size: 12px;
-      opacity: 0.9;
-    }
   </style>
+
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png" alt="Vai de Ofertão">
-  <nav class="menu">
-    <a href="#skincare">Skincare</a>
-    <a href="#utilidades">Utilidades</a>
-    <a href="#eletronicos">Eletrônicos</a>
-  </nav>
+  <!-- HEADER -->
+  <header>
+    <img src="_imagem/_logo.png" alt="Vai de Ofertão" class="logo">
+    <nav>
+      <a href="#">Skincare</a>
+      <a href="#">Utilidades</a>
+      <a href="#">Eletrônicos</a>
+    </nav>
 </header>
 
+  <!-- CONTEÚDO -->
 <main class="container">
-
-  <section id="skincare">
-    <div class="grid">
+  <section class="products">
 
       <article class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/679/679922.png" alt="">
-        <h3>Produto 1</h3>
-        <div class="price">A partir de R$ 129,90 *</div>
-        <p>Descrição curta e objetiva.</p>
-        <div class="buttons">
-          <a href="#" class="btn-shopee">Shopee</a>
-          <a href="#" class="btn-ml">Mercado Livre</a>
+        <img src="produto1.jpg" alt="Produto em oferta">
+        <h2>Produto em Oferta</h2>
+        <p>Descrição curta do produto.</p>
+        <div class="price">A partir de R$ 99,90*</div>
+        <div class="buy-buttons">
+          <a href="#" class="shopee">Shopee</a>
+          <a href="#" class="mercadolivre">Mercado Livre</a>
         </div>
       </article>
 
       <article class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/679/679922.png" alt="">
-        <h3>Produto 2</h3>
-        <div class="price">A partir de R$ 129,90 *</div>
-        <p>Descrição curta e objetiva.</p>
-        <div class="buttons">
-          <a href="#" class="btn-shopee">Shopee</a>
-          <a href="#" class="btn-ml">Mercado Livre</a>
+        <img src="produto2.jpg" alt="Produto em promoção">
+        <h2>Produto em Promoção</h2>
+        <p>Descrição curta do produto.</p>
+        <div class="price">A partir de R$ 149,90*</div>
+        <div class="buy-buttons">
+          <a href="#" class="shopee">Shopee</a>
+          <a href="#" class="mercadolivre">Mercado Livre</a>
         </div>
       </article>
 
       <article class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/679/679922.png" alt="">
-        <h3>Produto 3</h3>
-        <div class="price">A partir de R$ 129,90 *</div>
-        <p>Descrição curta e objetiva.</p>
-        <div class="buttons">
-          <a href="#" class="btn-shopee">Shopee</a>
-          <a href="#" class="btn-ml">Mercado Livre</a>
+        <img src="produto3.jpg" alt="Produto com desconto">
+        <h2>Produto com Desconto</h2>
+        <p>Descrição curta do produto.</p>
+        <div class="price">A partir de R$ 79,90*</div>
+        <div class="buy-buttons">
+          <a href="#" class="shopee">Shopee</a>
+          <a href="#" class="mercadolivre">Mercado Livre</a>
         </div>
       </article>
 
-    </div>
   </section>
 
+    <p class="notice">
+      *Os preços podem sofrer alterações sem aviso prévio. Valores válidos no momento do clique.
+    </p>
 </main>
 
+  <!-- FOOTER -->
 <footer>
-  © 2025 – Vai de Ofertão
-  <small>
-    * Os preços e a disponibilidade dos produtos podem sofrer alterações sem aviso prévio.
-    Verifique as condições diretamente no marketplace antes de concluir a compra.
-  </small>
+    © 2025 – Vai de Ofertão. Todos os direitos reservados.
 </footer>
 
 </body>
