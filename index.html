@@ -1,87 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Básico -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO BÁSICO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Título SEO -->
-    <title>Vai de Ofertão | Ofertas e Promoções com os Melhores Preços</title>
+  <title>Vai de Ofertão | As Melhores Ofertas em Skincare, Utilidades e Eletrônicos</title>
 
-    <!-- Descrição SEO -->
-    <meta name="description" content="Confira as melhores ofertas e promoções do dia. Produtos selecionados com ótimo preço e entrega rápida. Vai de Ofertão.">
+  <meta name="description" content="Vai de Ofertão reúne as melhores ofertas do dia em Skincare, Utilidades e Eletrônicos. Compare preços e compre com segurança na Shopee e Mercado Livre.">
 
-    <!-- Palavras-chave -->
-    <meta name="keywords" content="ofertas, promoções, descontos, comprar barato, ofertas online, vai de ofertão">
+  <meta name="keywords" content="ofertas, promoções, skincare barato, eletrônicos em oferta, utilidades domésticas, shopee ofertas, mercado livre ofertas">
 
-    <!-- Autor -->
-    <meta name="author" content="Vai de Ofertão">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.vaideofertao.com.br/">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Vai de Ofertão | Ofertas e Promoções">
-    <meta property="og:description" content="As melhores ofertas e promoções do dia em um só lugar.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.vaideofertao.com.br">
-    <meta property="og:image" content="https://www.vaideofertao.com.br/imagem-compartilhamento.jpg">
+  <!-- OPEN GRAPH (WhatsApp / Facebook / Instagram) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vai de Ofertão | As Melhores Ofertas do Dia">
+  <meta property="og:description" content="As melhores ofertas em Skincare, Utilidades e Eletrônicos. Compare preços e compre nos maiores marketplaces.">
+  <meta property="og:url" content="https://www.vaideofertao.com.br/">
+  <meta property="og:image" content="https://www.vaideofertao.com.br/og-image.jpg">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vai de Ofertão | Ofertas e Promoções">
-    <meta name="twitter:description" content="Ofertas imperdíveis com os melhores preços.">
-    <meta name="twitter:image" content="https://www.vaideofertao.com.br/imagem-compartilhamento.jpg">
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vai de Ofertão | As Melhores Ofertas do Dia">
+  <meta name="twitter:description" content="Ofertas selecionadas em Skincare, Utilidades e Eletrônicos.">
+  <meta name="twitter:image" content="https://www.vaideofertao.com.br/og-image.jpg">
 
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- Fonte -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <style>
+  <!-- ESTILO -->
+  <style>
     body {
       margin: 0;
-      font-family: 'Inter', Arial, sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #c62828;
-      color: #000;
     }
 
     header {
       background: #b71c1c;
-      padding: 15px;
-      text-align: center;
       color: #fff;
-      font-size: 22px;
+      text-align: center;
+      padding: 20px;
+      font-size: 26px;
       font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 15px;
+      background: #b71c1c;
+      flex-wrap: wrap;
+    }
+
+    .btn-menu {
+      background: #ffffff;
+      color: #b71c1c;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
     }
 
     .container {
       padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #fff;
+      margin-bottom: 15px;
     }
 
     .produto {
-      background: #fff;
-      border-radius: 8px;
+      background: #ffffff;
+      border-radius: 10px;
       padding: 15px;
       margin-bottom: 20px;
     }
 
-    .produto h2 {
-      margin: 0 0 10px;
-    }
-
-    .preco {
-      font-weight: bold;
-      margin: 10px 0;
-    }
-
     .links a {
-      margin-right: 15px;
+      display: inline-block;
+      margin-right: 10px;
       text-decoration: none;
-      color: #1565c0;
-      font-weight: bold;
+      background: #b71c1c;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14px;
     }
 
     footer {
@@ -90,77 +98,56 @@
       text-align: center;
       padding: 15px;
       font-size: 14px;
-}
-    .menu {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin: 15px 0;
-}
+    }
 
-.btn-menu {
-  background-color: #ffffff;
-  color: #b71c1c;
-  padding: 10px 16px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  transition: all 0.2s ease;
-}
-
-.btn-menu:hover {
-  background-color: #f5f5f5;
-  transform: scale(1.05);
-}
+    footer small {
+      display: block;
+      margin-top: 10px;
+      font-size: 12px;
+    }
   </style>
-    
 </head>
 
 <body>
 
-<header class="site-header">
-    <div class="logo">
-        <img src="_imagem/logo.png" alt="Vai de Ofertão">
-    </div>
-
-    <nav class="menu">
-        <a href="#skincare" class="menu-btn">Skincare</a>
-        <a href="#utilidades" class="menu-btn">Utilidades</a>
-        <a href="#eletronicos" class="menu-btn">Eletrônicos</a>
-    </nav>
+<header>
+  Vai de Ofertão
 </header>
+
+<nav class="menu">
+  <a href="#skincare" class="btn-menu">Skincare</a>
+  <a href="#utilidades" class="btn-menu">Utilidades</a>
+  <a href="#eletronicos" class="btn-menu">Eletrônicos</a>
+</nav>
 
 <main class="container">
 
-    <!-- H1 obrigatório -->
-    <h1>As Melhores Ofertas do Dia</h1>
+<section id="skincare">
+  <h2>Skincare em Oferta</h2>
+  <div class="produto">
+    <h3>Produto 1</h3>
+    <p>A partir de R$ 129,90 *</p>
+    <p>Descrição curta e objetiva.</p>
+    <div class="links">
+      <a href="#">Shopee</a>
+      <a href="#">Mercado Livre</a>
+    </div>
+  </div>
+</section>
 
-    <section class="produtos">
+<section id="utilidades">
+  <h2>Utilidades Domésticas</h2>
+</section>
 
-        <div class="produto">
-            <img src="_imagem/132127043.avif" alt="Produto 1 em oferta">
-            <h3>Produto 1</h3>
-            <div class="preco">A partir de R$ 129,90 <span class="asterisco">*</span></div>
-            <p>Descrição curta e objetiva.</p>
-
-            <div class="botoes-marketplace">
-                <a href="LINK_SHOPEE" target="_blank" rel="nofollow noopener" class="btn shopee">Shopee</a>
-                <a href="LINK_ML" target="_blank" rel="nofollow noopener" class="btn mercado-livre">Mercado Livre</a>
-            </div>
-        </div>
-
-        <!-- Repete os produtos -->
-    </section>
+<section id="eletronicos">
+  <h2>Eletrônicos em Promoção</h2>
+</section>
 
 </main>
 
 <footer>
-    <p>© 2025 – Vai de Ofertão</p>
-    <small>
-        * Os preços e a disponibilidade dos produtos podem sofrer alterações sem aviso prévio.
-        Verifique as condições diretamente no marketplace antes de concluir a compra.
-    </small>
+  © 2025 – Vai de Ofertão
+  <small>* Preços e disponibilidade podem variar sem aviso prévio.</small>
 </footer>
 
 </body>
