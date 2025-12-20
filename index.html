@@ -88,14 +88,8 @@
     }
 
     @media (max-width: 480px) {
-      .brand-name {
-        font-size: 16px;
-      }
-
-      nav a {
-        padding: 12px 20px;
-        font-size: 15px;
-      }
+      .brand-name { font-size: 16px; }
+      nav a { padding: 12px 20px; font-size: 15px; }
     }
 
     /* CONTAINER */
@@ -127,12 +121,16 @@
       box-shadow: 0 10px 24px rgba(0,0,0,0.12);
     }
 
+    /* IMAGEM — CORREÇÃO DO “BURACO” */
     .card img {
       width: 100%;
-      height: auto;
+      aspect-ratio: 1 / 1;     /* mantém proporção */
+      max-height: 220px;       /* evita espaço exagerado no mobile */
+      object-fit: cover;       /* corta elegante */
       border-radius: 10px;
       margin-bottom: 12px;
       display: block;
+      background-color: #f2f2f2; /* placeholder elegante */
     }
 
     .card h2 {
@@ -226,7 +224,7 @@
     <section class="products">
 
       <article class="card">
-        <img src="produto1.jpg" alt="Produto em oferta" loading="lazy" width="600" height="600">
+        <img src="produto1.jpg" alt="Produto em oferta" loading="lazy">
         <h2>Produto em Oferta</h2>
         <p>Descrição curta do produto.</p>
         <div class="price">A partir de R$ 99,90</div>
@@ -237,7 +235,7 @@
       </article>
 
       <article class="card">
-        <img src="produto2.jpg" alt="Produto em promoção" loading="lazy" width="600" height="600">
+        <img src="produto2.jpg" alt="Produto em promoção" loading="lazy">
         <h2>Produto em Promoção</h2>
         <p>Descrição curta do produto.</p>
         <div class="price">A partir de R$ 149,90</div>
@@ -248,7 +246,7 @@
       </article>
 
       <article class="card">
-        <img src="produto3.jpg" alt="Produto com desconto" loading="lazy" width="600" height="600">
+        <img src="produto3.jpg" alt="Produto com desconto" loading="lazy">
         <h2>Produto com Desconto</h2>
         <p>Descrição curta do produto.</p>
         <div class="price">A partir de R$ 79,90</div>
