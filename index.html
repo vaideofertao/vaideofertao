@@ -1,102 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- SEO BÁSICO -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Vai de Ofertão | As Melhores Ofertas em Skincare, Utilidades e Eletrônicos</title>
-
-  <meta name="description" content="Vai de Ofertão reúne as melhores ofertas do dia em Skincare, Utilidades e Eletrônicos. Compare preços e compre com segurança na Shopee e Mercado Livre.">
-
-  <meta name="keywords" content="ofertas, promoções, skincare barato, eletrônicos em oferta, utilidades domésticas, shopee ofertas, mercado livre ofertas">
-
+  <title>Vai de Ofertão | As Melhores Ofertas do Dia</title>
+  <meta name="description" content="As melhores ofertas do dia em Skincare, Utilidades e Eletrônicos. Compare preços e compre com segurança na Shopee e Mercado Livre.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.vaideofertao.com.br/">
 
-  <!-- OPEN GRAPH (WhatsApp / Facebook / Instagram) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Vai de Ofertão | As Melhores Ofertas do Dia">
-  <meta property="og:description" content="As melhores ofertas em Skincare, Utilidades e Eletrônicos. Compare preços e compre nos maiores marketplaces.">
-  <meta property="og:url" content="https://www.vaideofertao.com.br/">
-  <meta property="og:image" content="https://www.vaideofertao.com.br/og-image.jpg">
-
-  <!-- TWITTER -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Vai de Ofertão | As Melhores Ofertas do Dia">
-  <meta name="twitter:description" content="Ofertas selecionadas em Skincare, Utilidades e Eletrônicos.">
-  <meta name="twitter:image" content="https://www.vaideofertao.com.br/og-image.jpg">
-
-  <!-- ESTILO -->
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #c62828;
+      background: #c62828;
     }
 
+    /* HEADER */
     header {
       background: #b71c1c;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 26px;
-      font-weight: bold;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 40px;
     }
 
     .menu {
       display: flex;
-      justify-content: center;
       gap: 12px;
-      padding: 15px;
-      background: #b71c1c;
-      flex-wrap: wrap;
     }
 
-    .btn-menu {
-      background: #ffffff;
+    .menu a {
+      background: #fff;
       color: #b71c1c;
-      padding: 10px 18px;
-      border-radius: 25px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 40px;
+      opacity: 0.4;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+    }
+
+    .price {
+      color: #2e7d32;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .btn-shopee {
+      background: #ee4d2d;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
       font-size: 14px;
     }
 
-    .container {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #fff;
-      margin-bottom: 15px;
-    }
-
-    .produto {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 20px;
-    }
-
-    .links a {
-      display: inline-block;
-      margin-right: 10px;
-      text-decoration: none;
-      background: #b71c1c;
-      color: #fff;
+    .btn-ml {
+      background: #ffd500;
+      color: #000;
       padding: 8px 14px;
       border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
       font-size: 14px;
     }
 
+    /* FOOTER */
     footer {
       background: #8e0000;
       color: #fff;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       font-size: 14px;
     }
 
@@ -111,43 +133,63 @@
 <body>
 
 <header>
-  Vai de Ofertão
+  <!-- coloque sua logo depois -->
+  <img src="logo.png" alt="Vai de Ofertão">
+
+  <nav class="menu">
+    <a href="#skincare">🌸 Skincare</a>
+    <a href="#utilidades">🏠 Utilidades</a>
+    <a href="#eletronicos">🔌 Eletrônicos</a>
+  </nav>
 </header>
 
-<nav class="menu">
-  <a href="#skincare" class="btn-menu">Skincare</a>
-  <a href="#utilidades" class="btn-menu">Utilidades</a>
-  <a href="#eletronicos" class="btn-menu">Eletrônicos</a>
-</nav>
+<div class="container">
 
-<main class="container">
+  <div class="grid">
 
-<section id="skincare">
-  <h2>Skincare em Oferta</h2>
-  <div class="produto">
-    <h3>Produto 1</h3>
-    <p>A partir de R$ 129,90 *</p>
-    <p>Descrição curta e objetiva.</p>
-    <div class="links">
-      <a href="#">Shopee</a>
-      <a href="#">Mercado Livre</a>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/679/679922.png">
+      <h3>Produto 1</h3>
+      <div class="price">A partir de R$ 129,90 *</div>
+      <p>Descrição curta e objetiva.</p>
+      <div class="buttons">
+        <a href="#" class="btn-shopee">Shopee</a>
+        <a href="#" class="btn-ml">Mercado Livre</a>
+      </div>
     </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/679/679922.png">
+      <h3>Produto 2</h3>
+      <div class="price">A partir de R$ 129,90 *</div>
+      <p>Descrição curta e objetiva.</p>
+      <div class="buttons">
+        <a href="#" class="btn-shopee">Shopee</a>
+        <a href="#" class="btn-ml">Mercado Livre</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/679/679922.png">
+      <h3>Produto 3</h3>
+      <div class="price">A partir de R$ 129,90 *</div>
+      <p>Descrição curta e objetiva.</p>
+      <div class="buttons">
+        <a href="#" class="btn-shopee">Shopee</a>
+        <a href="#" class="btn-ml">Mercado Livre</a>
+      </div>
+    </div>
+
   </div>
-</section>
 
-<section id="utilidades">
-  <h2>Utilidades Domésticas</h2>
-</section>
-
-<section id="eletronicos">
-  <h2>Eletrônicos em Promoção</h2>
-</section>
-
-</main>
+</div>
 
 <footer>
   © 2025 – Vai de Ofertão
-  <small>* Preços e disponibilidade podem variar sem aviso prévio.</small>
+  <small>
+    * Os preços e a disponibilidade dos produtos podem sofrer alterações sem aviso prévio.
+    Verifique as condições diretamente no marketplace antes de concluir a compra.
+  </small>
 </footer>
 
 </body>
