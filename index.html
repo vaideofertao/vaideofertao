@@ -58,11 +58,14 @@ margin:40px 0 22px;
 display:inline-block
 }
 
-/* PRODUCTS */
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media(max-width:1024px){.products{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:860px){.products{grid-template-columns:1fr}}
+/* PRODUCTS — AJUSTE DEFINITIVO */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:22px;
+}
 
+/* CARDS */
 .card{background:#fff;border-radius:14px;padding:18px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.08)}
 .card img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;margin-bottom:12px}
 .card h2{font-size:17px;margin-bottom:6px}
@@ -75,7 +78,7 @@ display:inline-block
 .shopee{background:#ee4d2d;color:#fff}
 .mercadolivre{background:#ffe600;color:#333}
 
-/* ✅ SUPORTE A BOTÃO INDISPONÍVEL (ÚNICA ADIÇÃO) */
+/* BOTÃO INDISPONÍVEL */
 .buy-buttons .disabled{
   opacity:0.4;
   pointer-events:none;
@@ -94,6 +97,7 @@ display:inline-block
 .notice{margin-top:30px;font-size:13px;color:#fff;text-align:center}
 footer{background:#8f0000;color:#fff;text-align:center;padding:20px;margin-top:40px}
 </style>
+
 
 <head>
 <meta charset="UTF-8">
