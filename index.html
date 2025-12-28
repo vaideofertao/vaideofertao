@@ -58,12 +58,27 @@ margin:40px 0 22px;
 display:inline-block
 }
 
-/* PRODUCTS — AJUSTE DEFINITIVO */
+/* PRODUCTS */
 .products{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns:repeat(3,1fr);
   gap:22px;
 }
+
+/* Tablets e telas médias */
+@media (max-width: 1024px){
+  .products{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+/* Celulares (FORÇADO – browser e app) */
+@media (max-width: 640px){
+  .products{
+    grid-template-columns:1fr;
+  }
+}
+
 
 /* CARDS */
 .card{background:#fff;border-radius:14px;padding:18px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.08)}
